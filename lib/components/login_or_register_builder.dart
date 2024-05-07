@@ -4,6 +4,7 @@ import 'package:flutter_food_app/components/custom_card_continare.dart';
 import 'package:flutter_food_app/components/custom_heading_contents.dart';
 import 'package:flutter_food_app/components/custom_small_text.dart';
 import 'package:flutter_food_app/constants/color_constant.dart';
+import 'package:flutter_food_app/views/login_screen.dart';
 
 class LoginOrRegisterBuilder extends StatelessWidget {
   const LoginOrRegisterBuilder({
@@ -12,18 +13,18 @@ class LoginOrRegisterBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        CustomCardContainer(),
-        SizedBox(
+        const CustomCardContainer(),
+        const SizedBox(
           height: 30.0,
         ),
-        CustomHeadingContents(),
-        SizedBox(
+        const CustomHeadingContents(),
+        const SizedBox(
           height: 30.0,
         ),
-        Column(
+        const Column(
           children: [
             CustomSmallText(
               text: 'New Food Types has been published',
@@ -34,18 +35,21 @@ class LoginOrRegisterBuilder extends StatelessWidget {
             CustomSmallText(text: 'Starting from next months '),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 50.0,
         ),
         CustomButtom(
           colors: kButtonColor,
           borderColor: Colors.transparent,
           text: 'Sing In',
+          onTap: () {
+            Navigator.pushNamed(context, LoginScreen.id);
+          },
         ),
-        SizedBox(
+        const SizedBox(
           height: 20.0,
         ),
-        CustomButtom(
+        const CustomButtom(
           borderColor: kButtonColor,
           text: 'Sing Up',
         )

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_food_app/components/login_screen_body.dart';
+import 'package:flutter_food_app/constants/color_constant.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -7,9 +9,14 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [],
+      appBar: AppBar(
+        backgroundColor: kMainColor,
+        leading: const Icon(
+          Icons.arrow_back_ios,
+          color: Colors.white,
+        ),
       ),
+      body: const LoginScreenBody(),
     );
   }
 }

@@ -6,17 +6,20 @@ class CustomSmallText extends StatelessWidget {
     required this.text,
     this.fontWeight,
     this.fontSize,
+    this.colors,
   });
 
   final String text;
   final FontWeight? fontWeight;
   final double? fontSize;
+  final Color? colors;
+
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       style: TextStyle(
-        color: Colors.white,
+        color: colors == null ? Colors.white : colors,
         fontSize: fontSize,
         height: 1.8,
         fontWeight: fontWeight,
