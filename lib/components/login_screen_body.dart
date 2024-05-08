@@ -85,6 +85,8 @@ class LoginScreenBody extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(context, SignUpScreen.id);
             },
+            text1: 'Don\'t have an acount? ',
+            text2: 'Create',
           )
         ],
       ),

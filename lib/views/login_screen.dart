@@ -14,15 +14,10 @@ class LoginScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kMainColor,
         toolbarHeight: 70.0,
-        leading: GestureDetector(
+        leading: AppBarBackIcon(
           onTap: () {
             Navigator.pop(context);
           },
-          child: AppBarBackIcon(
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
         ),
       ),
       body: const LoginScreenBody(),

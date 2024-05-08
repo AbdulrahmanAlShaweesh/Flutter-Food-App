@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_app/components/custom_appbar_back_icon.dart';
+import 'package:flutter_food_app/components/singup_screen_body.dart';
 import 'package:flutter_food_app/constants/color_constant.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -18,11 +19,7 @@ class SignUpScreen extends StatelessWidget {
           },
         ),
       ),
-      body: ListView(
-        children: const [],
-      ),
+      body: const SingUpScareenBody(),
     );
   }
 }
-
-
