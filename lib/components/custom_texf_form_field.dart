@@ -7,14 +7,17 @@ class CustomTextFormField extends StatelessWidget {
     required this.hintText,
     required this.prefixIcon,
     this.suffixIcon,
+    required this.keyboardType,
   });
 
   final String hintText;
   final IconData prefixIcon;
   final IconData? suffixIcon;
+  final TextInputType? keyboardType;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardType,
       validator: (data) {
         if (data?.isEmpty ?? true) {
           return 'Field is reqired';

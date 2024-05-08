@@ -47,16 +47,21 @@ class _SingUpScareenBodyState extends State<SingUpScareenBody> {
               height: 15.0,
             ),
             const CustomTextFormField(
-                hintText: 'Username', prefixIcon: Icons.person_2),
+                keyboardType: TextInputType.name,
+                hintText: 'Username',
+                prefixIcon: Icons.person_2),
             const SizedBox(
               height: 15.0,
             ),
             const CustomTextFormField(
-                hintText: 'Email Address', prefixIcon: Icons.email_outlined),
+                keyboardType: TextInputType.emailAddress,
+                hintText: 'Email Address',
+                prefixIcon: Icons.email_outlined),
             const SizedBox(
               height: 15.0,
             ),
             const CustomTextFormField(
+              keyboardType: TextInputType.phone,
               hintText: 'Phone Number',
               prefixIcon: Icons.phone_android,
             ),
@@ -64,6 +69,7 @@ class _SingUpScareenBodyState extends State<SingUpScareenBody> {
               height: 15.0,
             ),
             const CustomTextFormField(
+              keyboardType: TextInputType.text,
               hintText: 'Password',
               prefixIcon: Icons.lock,
               suffixIcon: Icons.visibility,
@@ -72,6 +78,7 @@ class _SingUpScareenBodyState extends State<SingUpScareenBody> {
               height: 15.0,
             ),
             const CustomTextFormField(
+              keyboardType: TextInputType.text,
               hintText: 'Confirm Password',
               prefixIcon: Icons.lock,
               suffixIcon: Icons.visibility,

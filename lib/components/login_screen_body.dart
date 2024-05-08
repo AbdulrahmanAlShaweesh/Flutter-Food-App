@@ -42,6 +42,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
               height: 20.0,
             ),
             const CustomTextFormField(
+              keyboardType: TextInputType.emailAddress,
               hintText: 'username',
               prefixIcon: Icons.person,
             ),
@@ -49,6 +50,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
               height: 20.0,
             ),
             const CustomTextFormField(
+              keyboardType: TextInputType.text,
               hintText: 'Password',
               prefixIcon: Icons.lock,
               suffixIcon: Icons.visibility,
