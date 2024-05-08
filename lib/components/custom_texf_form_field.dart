@@ -15,6 +15,11 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      validator: (data) {
+        if (data?.isEmpty ?? true) {
+          return 'Field is reqired';
+        }
+      },
       style: const TextStyle(color: kMainColor),
       decoration: InputDecoration(
         prefixIcon: Icon(
