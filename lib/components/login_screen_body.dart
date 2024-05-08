@@ -7,6 +7,7 @@ import 'package:flutter_food_app/components/custom_small_text.dart';
 import 'package:flutter_food_app/components/custom_texf_form_field.dart';
 import 'package:flutter_food_app/components/or_divider.dart';
 import 'package:flutter_food_app/constants/color_constant.dart';
+import 'package:flutter_food_app/views/signup_screen.dart';
 
 class LoginScreenBody extends StatelessWidget {
   const LoginScreenBody({
@@ -16,66 +17,75 @@ class LoginScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 30.0),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 25.0,
+      ),
       child: ListView(
-        children: const [
-          CustomSmallText(
-            text: 'Login to your account',
-            fontSize: 18.0,
+        children: [
+          const Center(
+            child: CustomSmallText(
+              text: 'Login',
+              fontSize: 35.0,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
-          CustomTextFormField(
+          const CustomTextFormField(
             hintText: 'username',
             prefixIcon: Icons.person,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
-          CustomTextFormField(
+          const CustomTextFormField(
             hintText: 'Password',
             prefixIcon: Icons.lock,
             suffixIcon: Icons.visibility,
           ),
-          SizedBox(
+          const SizedBox(
             height: 30.0,
           ),
-          CustomButtom(
+          const CustomButtom(
             borderColor: Colors.transparent,
             text: 'Sign In',
             colors: kButtonColor,
           ),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
-          CustomForgotPasswordText(),
-          SizedBox(
+          const CustomForgotPasswordText(),
+          const SizedBox(
             height: 30.0,
           ),
-          OrDivider(),
-          SizedBox(
+          const OrDivider(),
+          const SizedBox(
             height: 30.0,
           ),
-          CustomAccountMedia(
+          const CustomAccountMedia(
             icon: 'assets/svg/icons8-facebook.svg',
             text: 'Login with Facebook',
             backgroundColor: Colors.black,
             colors: Colors.white,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
-          CustomAccountMedia(
+          const CustomAccountMedia(
             icon: 'assets/svg/icons8-facebook.svg',
             text: 'Login with Google',
             backgroundColor: Colors.white,
             colors: Colors.black,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
-          CustomHaveAccount()
+          CustomHaveAccount(
+            onTap: () {
+              Navigator.pushNamed(context, SignUpScreen.id);
+            },
+          )
         ],
       ),
     );
