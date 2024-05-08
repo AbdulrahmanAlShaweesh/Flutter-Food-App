@@ -18,6 +18,7 @@ class SingUpScareenBody extends StatefulWidget {
 
 class _SingUpScareenBodyState extends State<SingUpScareenBody> {
   GlobalKey<FormState> formKey = GlobalKey();
+  String? username, email, phoneNumber, password, comirmPassword;
 
   @override
   Widget build(BuildContext context) {
@@ -46,21 +47,30 @@ class _SingUpScareenBodyState extends State<SingUpScareenBody> {
             const SizedBox(
               height: 15.0,
             ),
-            const CustomTextFormField(
+            CustomTextFormField(
+                onSaved: (data) {
+                  username = data;
+                },
                 keyboardType: TextInputType.name,
                 hintText: 'Username',
                 prefixIcon: Icons.person_2),
             const SizedBox(
               height: 15.0,
             ),
-            const CustomTextFormField(
+            CustomTextFormField(
+                onSaved: (data) {
+                  email = data;
+                },
                 keyboardType: TextInputType.emailAddress,
                 hintText: 'Email Address',
                 prefixIcon: Icons.email_outlined),
             const SizedBox(
               height: 15.0,
             ),
-            const CustomTextFormField(
+            CustomTextFormField(
+              onSaved: (data) {
+                phoneNumber = data;
+              },
               keyboardType: TextInputType.phone,
               hintText: 'Phone Number',
               prefixIcon: Icons.phone_android,
@@ -68,7 +78,10 @@ class _SingUpScareenBodyState extends State<SingUpScareenBody> {
             const SizedBox(
               height: 15.0,
             ),
-            const CustomTextFormField(
+            CustomTextFormField(
+              onSaved: (data) {
+                password = data;
+              },
               keyboardType: TextInputType.text,
               hintText: 'Password',
               prefixIcon: Icons.lock,
@@ -77,7 +90,10 @@ class _SingUpScareenBodyState extends State<SingUpScareenBody> {
             const SizedBox(
               height: 15.0,
             ),
-            const CustomTextFormField(
+            CustomTextFormField(
+              onSaved: (data) {
+                comirmPassword = data;
+              },
               keyboardType: TextInputType.text,
               hintText: 'Confirm Password',
               prefixIcon: Icons.lock,
@@ -92,6 +108,8 @@ class _SingUpScareenBodyState extends State<SingUpScareenBody> {
               colors: kButtonColor,
               onTap: () {
                 if (formKey.currentState!.validate()) {
+                  formKey.currentState!.save();
+
                   // firebase.
                 }
               },

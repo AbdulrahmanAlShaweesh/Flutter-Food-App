@@ -20,6 +20,7 @@ class LoginScreenBody extends StatefulWidget {
 
 class _LoginScreenBodyState extends State<LoginScreenBody> {
   final GlobalKey<FormState> formKey = GlobalKey();
+  String? email, password;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,10 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
             const SizedBox(
               height: 20.0,
             ),
-            const CustomTextFormField(
+            CustomTextFormField(
+              onSaved: (data) {
+                email = data;
+              },
               keyboardType: TextInputType.emailAddress,
               hintText: 'username',
               prefixIcon: Icons.person,
@@ -49,7 +53,10 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
             const SizedBox(
               height: 20.0,
             ),
-            const CustomTextFormField(
+            CustomTextFormField(
+              onSaved: (data) {
+                password = data;
+              },
               keyboardType: TextInputType.text,
               hintText: 'Password',
               prefixIcon: Icons.lock,
@@ -64,6 +71,8 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
               colors: kButtonColor,
               onTap: () {
                 if (formKey.currentState!.validate()) {
+                  formKey.currentState!.save();
+                  print('email => $email, password => $password');
                   // firebase.
                 }
               },

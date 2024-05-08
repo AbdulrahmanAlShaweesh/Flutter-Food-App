@@ -8,20 +8,24 @@ class CustomTextFormField extends StatelessWidget {
     required this.prefixIcon,
     this.suffixIcon,
     required this.keyboardType,
+    required this.onSaved,
   });
 
   final String hintText;
   final IconData prefixIcon;
   final IconData? suffixIcon;
   final TextInputType? keyboardType;
+  final void Function(String?)? onSaved;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onSaved: onSaved,
       keyboardType: keyboardType,
       validator: (data) {
         if (data?.isEmpty ?? true) {
           return 'Field is reqired';
         }
+        return null;
       },
       style: const TextStyle(color: kMainColor),
       decoration: InputDecoration(
