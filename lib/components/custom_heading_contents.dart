@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_app/components/custom_heading_text.dart';
-import 'package:flutter_food_app/constants/color_constant.dart';
+import 'package:flutter_food_app/constants.dart';
 
 class CustomHeadingContents extends StatelessWidget {
   const CustomHeadingContents({

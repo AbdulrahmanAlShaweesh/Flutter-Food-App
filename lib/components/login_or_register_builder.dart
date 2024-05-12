@@ -3,7 +3,7 @@ import 'package:flutter_food_app/components/custom_button.dart';
 import 'package:flutter_food_app/components/custom_card_continare.dart';
 import 'package:flutter_food_app/components/custom_heading_contents.dart';
 import 'package:flutter_food_app/components/custom_small_text.dart';
-import 'package:flutter_food_app/constants/color_constant.dart';
+import 'package:flutter_food_app/constants.dart';
 import 'package:flutter_food_app/views/login_screen.dart';
 import 'package:flutter_food_app/views/signup_screen.dart';
 

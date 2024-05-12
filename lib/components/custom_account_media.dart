@@ -8,14 +8,15 @@ class CustomAccountMedia extends StatelessWidget {
     required this.icon,
     required this.text,
     required this.backgroundColor,
-    this.colors,
+    this.colors, this.height, this.width,
   });
 
   final String icon;
   final String text;
   final Color backgroundColor;
   final Color? colors;
-
+  final double? height; 
+  final double? width;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,7 +33,7 @@ class CustomAccountMedia extends StatelessWidget {
         children: [
           SvgPicture.asset(
             icon,
-            color: colors,
+            color: colors, height: height, width: width,
           ),
           const SizedBox(
             width: 5.0,

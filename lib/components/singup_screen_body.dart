@@ -4,7 +4,7 @@ import 'package:flutter_food_app/components/custom_have_account.dart';
 import 'package:flutter_food_app/components/custom_heading_text.dart';
 import 'package:flutter_food_app/components/custom_small_text.dart';
 import 'package:flutter_food_app/components/custom_texf_form_field.dart';
-import 'package:flutter_food_app/constants/color_constant.dart';
+import 'package:flutter_food_app/constants.dart';
 import 'package:flutter_food_app/views/login_screen.dart';
 
 class SingUpScareenBody extends StatefulWidget {

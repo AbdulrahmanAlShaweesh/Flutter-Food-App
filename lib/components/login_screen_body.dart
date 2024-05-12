@@ -6,7 +6,7 @@ import 'package:flutter_food_app/components/custom_have_account.dart';
 import 'package:flutter_food_app/components/custom_small_text.dart';
 import 'package:flutter_food_app/components/custom_texf_form_field.dart';
 import 'package:flutter_food_app/components/or_divider.dart';
-import 'package:flutter_food_app/constants/color_constant.dart';
+import 'package:flutter_food_app/constants.dart';
 import 'package:flutter_food_app/views/signup_screen.dart';
 
 class LoginScreenBody extends StatefulWidget {
@@ -72,8 +72,8 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
               onTap: () {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
-                  print('email => $email, password => $password');
                   // firebase.
+                  
                 }
               },
             ),
@@ -98,9 +98,11 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
               height: 20.0,
             ),
             const CustomAccountMedia(
-              icon: 'assets/svg/icons8-facebook.svg',
+              icon: 'assets/svg/icons8-google.svg',
               text: 'Login with Google',
               backgroundColor: Colors.white,
+              width: 20,
+              height: 30,
               colors: Colors.black,
             ),
             const SizedBox(
